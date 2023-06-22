@@ -23,7 +23,8 @@ public:
 			return;
 		}
 		// Cek apakah antrian kosng
-		if (REAR == max - 1) {
+		if (FRONT == - 1) {
+			FRONT = 0;
 			REAR = 0;
 		}
 		else {
@@ -73,7 +74,7 @@ public:
 		// Jika FRONT_position <= REAR-position, iterasi dari FRONT hingga REAR
 		if (FRONT_position <= REAR_position) {
 			while (FRONT_position <= REAR_position) {
-				cout << queue_array[REAR_position] << "   ";
+				cout << queue_array[FRONT_position] << "   ";
 				FRONT_position++;
 			}
 			cout << endl;
