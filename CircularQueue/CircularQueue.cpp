@@ -1,15 +1,16 @@
 #include <iostream>
 using namespace std;
 
-class queues {
+class queue {
 	int FRONT, REAR, max = 5;
-	int queues_array[5];
+	int queue_array[5];
 
 public:
-	queues() {
+	queue() {
 		FRONT = -1;
 		REAR = -1;
 	}
+
 	void insert() {
 		int num;
 		cout << "Enter a number: ";
@@ -32,15 +33,16 @@ public:
 			else
 				REAR = REAR + 1;
 		}
-		queues_array[REAR] = num;
+		queue_array[REAR] = num;
 	}
+
 	void remove() {
 		// Cek apakah antrian kosong
 		if (FRONT == -1) {
 			cout << "Queue underflow\n";
 			return;
 		}
-		cout << "\nThe element deleted from the queue is: " << queues_array[FRONT] << "\n";
+		cout << "\nThe element deleted from the queue is: " << queue_array[FRONT] << "\n";
 
 		// Cek jika antrian hanya memiliki satu elemnt
 		if (FRONT == REAR) {
@@ -71,7 +73,7 @@ public:
 		// Jika FRONT_position <= REAR-position, iterasi dari FRONT hingga REAR
 		if (FRONT_position <= REAR_position) {
 			while (FRONT_position <= REAR_position) {
-				cout << queues_array[REAR_position] << "   ";
+				cout << queue_array[REAR_position] << "   ";
 				FRONT_position++;
 			}
 			cout << endl;
@@ -79,7 +81,7 @@ public:
 		else {
 			//  Jika FRONT_position <= REAR-position, iterasi dari FRONT hingga akhir array
 			while (FRONT_position <= max - 1) {
-				cout << queues_array[FRONT_position] << "   ";
+				cout << queue_array[FRONT_position] << "   ";
 				FRONT_position++;
 			}
 
@@ -87,9 +89,10 @@ public:
 
 			// Iterasi dari awal array hingga REAR
 			while (FRONT_position <= REAR_position) {
-				cout << queues_array[FRONT_position] << "   ";
+				cout << queue_array[FRONT_position] << "   ";
 				FRONT_position++;
 			}
+			cout << endl;
 		}
 	}
 };
