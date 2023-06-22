@@ -68,7 +68,7 @@ public:
 
 		cout << "\nElements in the queue ar: \n";
 
-		// Jika FRONT_position <= REAR-position, iterasi dari FRONT hingga akhir array
+		// Jika FRONT_position <= REAR-position, iterasi dari FRONT hingga REAR
 		if (FRONT_position <= REAR_position) {
 			while (FRONT_position <= REAR_position) {
 				cout << queues_array[REAR_position] << "   ";
@@ -76,5 +76,6 @@ public:
 			}
 			cout << endl;
 		}
+		
 	}
 };
