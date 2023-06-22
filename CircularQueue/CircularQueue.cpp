@@ -21,5 +21,10 @@ public:
 			cout << "\nQueue overflow\n";
 			return;
 		}
+		// Cek apakah antrian kosng
+		if (REAR == max - 1) {
+			REAR = 0;
+		}
+		
 	}
 };
