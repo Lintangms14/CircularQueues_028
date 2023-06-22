@@ -45,7 +45,7 @@ public:
 		// Cek jika antrian hanya memiliki satu elemnt
 		if (FRONT == REAR) {
 			FRONT = -1;
-			REAR = -1
+			REAR = -1;
 		}
 	}
 };
